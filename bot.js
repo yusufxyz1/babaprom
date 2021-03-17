@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const ayarlar = require("./ayarlar.json");
 const chalk = require("chalk");
 const fs = require("fs");
 const moment = require("moment");
 const Jimp = require("jimp");
+const token = process.env.token;
 const db = require("quick.db");
-var prefix = ayarlar.prefix;
+var prefix = process.env.prefix;
 
 client.on("ready", () => {
   console.log(`Bot suan bu isimle aktif: ${client.user.tag}!`);
@@ -21,8 +21,6 @@ const log = message => {
 ////////////// KOMUTLAR SON
 ////////////// ALTI ELLEME
 require("./util/eventLoader")(client);
-
-client.login(ayarlar.token);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -97,7 +95,7 @@ client.elevation = message => {
   let permlvl = 0;
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-  if (ayarlar.sahip.includes(message.author.id)) permlvl = 4;
+  if (process.env.sahip.includes(message.author.id)) permlvl = 4;
   return permlvl;
 };
 
@@ -114,4 +112,4 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.login(ayarlar.token);
+client.login(token);
