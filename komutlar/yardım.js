@@ -13,8 +13,8 @@ const nobles = new Discord.MessageEmbed()
 ▬▬▬▬▬▬[ :closed_lock_with_key: **Eğlence Komutları** :closed_lock_with_key: ]▬▬▬▬▬▬
 
 > **» ${process.env.prefix}adamasmaca :** Adam Asmaca Oynarsınız.
-> **» ${process.env.prefix}adamasmaca :** Adam Asmaca Oynarsınız.
-> **» !beşlik :** Etiketlediğiniz kişiyle beşlik çakarsınız.
+> **» ${process.env.prefix}gay :** Etiketlediğiniz Kişinin Gaylik Düzeyini Öğrenirsiniz.
+> **» ${process.env.prefix}yılbaşı :** Yılbaşı Sayacı.
 > **» !ara155 :** Polisi aramanıza yarar.
 > **» !efkarım :** Şu anda olan efkarınızı ölçersiniz.
 > **» !ejderha-yazı :** Ejderha temalı logo üretirsiniz.
