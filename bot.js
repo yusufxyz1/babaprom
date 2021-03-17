@@ -18,6 +18,8 @@ const log = message => {
 
 ///////////// KOMUTLAR BAŞ
 
+
+
 ////////////// KOMUTLAR SON
 ////////////// ALTI ELLEME
 require("./util/eventLoader")(client);

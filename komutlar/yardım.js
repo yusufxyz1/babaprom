@@ -6,13 +6,13 @@ exports.run = (client, message) => {
 const nobles = new Discord.MessageEmbed()
 
 .setColor("RANDOM")
-.setTitle("**▬▬▬▬▬▬[** ©️ **Eğlence Bot (V12)** ©️ **]▬▬▬▬▬▬**  \n\n> :floppy_disk: `!istatistik` **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix** `!`")
+.setTitle("**▬▬▬▬▬▬[** ©️ **Eğlence Bot** ©️ **]▬▬▬▬▬▬**  \n\n> :floppy_disk: `!istatistik` **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix** `!`")
 .setThumbnail(client.user.avatarURL)
 .setDescription(`
 
 ▬▬▬▬▬▬[ :closed_lock_with_key: **Eğlence Komutları** :closed_lock_with_key: ]▬▬▬▬▬▬
 
-> **» !aduketçek :** Etiketlediğiniz kişiye aduket çekersiniz.
+> **» ${process.env.prefix}adamasmaca :** Adam Asmaca Oynarsınız.
 > **» !balık-tut :** Denizde balık tutarsınız.
 > **» !beşlik :** Etiketlediğiniz kişiyle beşlik çakarsınız.
 > **» !ara155 :** Polisi aramanıza yarar.
@@ -29,8 +29,8 @@ const nobles = new Discord.MessageEmbed()
 > **» !öp :** Etiketlediğiniz kişiyi öpmenize yarar.
 > **» !şekerye :** Bot size şeker ikram eder.
 
-Linkler ->
-**[Destek Sunucusu](${ayarlar.destekSunucusuDavetLinki})** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)**`)
+
+**Linkler ->** **[Destek Sunucusu](${ayarlar.destekSunucusuDavetLinki})** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)**`)
  
 .setFooter(client.user.username + "", client.user.avatarURL)
 .setTimestamp();

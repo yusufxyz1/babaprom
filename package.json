@@ -16,7 +16,9 @@
     "moment": "^2.29.1",
     "chalk": "^4.1.0",
     "jimp": "^0.16.1",
-    "quick.db": "^7.1.2"
+    "quick.db": "^7.1.2",
+    "common-tags": "^1.8.0",
+    "moment-duration-format": "^2.3.2"
   },
   "engines": {
     "node": "12.x"
