@@ -9,8 +9,8 @@ exports.run = async (client, message, args) => {
   const istatistikler = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setTimestamp()
-    .setFooter("© 2020 ro-BOT", client.user.avatarURL())
-    .addField("» **Botun Sahibi**", "<@idniz>")
+    .setFooter("© 2021 İstatistik", client.user.avatarURL())
+    .addField("» **Botun Sahibi**", `<@${process.env.sahip}>`)
     .addField("» **Gecikme süreleri**","Mesaj Gecikmesi: {ping1} ms \nBot Gecikmesi: {ping2} ms"
         .replace("{ping1}", new Date().getTime() - message.createdTimestamp)
         .replace("{ping2}", client.ws.ping),true)
@@ -21,7 +21,6 @@ exports.run = async (client, message, args) => {
     .addField("» **Kanallar**", client.channels.cache.size.toLocaleString(), true)
     .addField("» **Discord.JS sürüm**", "v" + Discord.version, true)
     .addField("» **Node.JS sürüm**", `${process.version}`, true)
-    .addField("» **Müzik Çalınan Sunucu Sayısı**", client.voice.connections.size, true)
     .addField("» **CPU**",`\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``,true)
     .addField("» **Bit**", `\`${os.arch()}\``, true)
     .addField("» **İşletim Sistemi**", `\`\`${os.platform()}\`\``, true)

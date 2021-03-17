@@ -12,4 +12,7 @@ Oynuyor events/ready.js İçinde
 
 # Bulunan Komutlar
 
+- Yardım
 - Adam Asmaca
+- İstatistik
+- Gay
