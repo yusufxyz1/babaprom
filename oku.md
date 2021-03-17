@@ -16,3 +16,4 @@ Oynuyor events/ready.js İçinde
 - Adam Asmaca
 - İstatistik
 - Gay
+- Yılbaşı
