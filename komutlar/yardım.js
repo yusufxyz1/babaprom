@@ -3,7 +3,7 @@ const ayarlar = require("../ayarlar.json");
 
 exports.run = (client, message) => {
 
-const nobles = new Discord.MessageEmbed()
+const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmiştir
 
 .setColor("RANDOM")
 .setTitle(`**▬▬▬▬▬▬[** ©️ **Eğlence Bot** ©️ **]▬▬▬▬▬▬**  \n\n> :floppy_disk: __${process.env.prefix}istatistik__ **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix:** __${process.env.prefix}__ `)
@@ -19,8 +19,8 @@ const nobles = new Discord.MessageEmbed()
 > **» ${process.env.prefix}kimlik :** Rastgele Kimlik Oluşturursunuz.
 > **» ${process.env.prefix}liderlik :** Coin Sıralamasını Gösterir.
 > **» ${process.env.prefix}balık-tut :** Balık Tutarsınız.
-> **» !hesapla :** Belirttiğiniz matematik işlemini bot yapar.
-> **» !kartopu :** Etiketlediğiniz kişiye kartopu atarsınız.
+> **» ${process.env.prefix}trump :** Trump Tweet Atar.
+> **» ${process.env.prefix}rozet :** Rozetlerinizi Gösterir.
 > **» !kaç-cm :** Bot malafat uzunluğunuzu söyler.
 > **» !kralol :** Kral olmanıza yarar.
 > **» !tokat :** Etiketlediğiniz kişiyi tokatlarsınız.
