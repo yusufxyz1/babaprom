@@ -19,7 +19,8 @@
     "quick.db": "^7.1.2",
     "common-tags": "^1.8.0",
     "moment-duration-format": "^2.3.2",
-    "discord.js-commando": "^0.12.1"
+    "google-tts-api": "^2.0.1",
+    "random": "^3.0.3"
   },
   "engines": {
     "node": "12.x"
