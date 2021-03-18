@@ -18,3 +18,5 @@ Oynuyor events/ready.js İçinde
 - Gay
 - Yılbaşı
 - Coin Sistemi (Bot.js 23. satır'dan 78. satıra kadar)
+- Kimlik Oluştur
+- Balık Tut

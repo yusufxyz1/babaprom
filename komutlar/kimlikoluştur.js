@@ -76,6 +76,7 @@ exports.run = (client, message, args) => {
         .setAuthor(message.author.username, message.author.avatarURL())
         .setDescription(`İsim: \n ${isim} \n \nSoyadı: \n ${soyad} \n \nTC Kimlik NO: \n ${tckimlik} `)
         .setFooter(`${message.author.username} için bir kimlik oluşturuldu.`)
+        .setThumbnail(message.author.avatarURL)
         .setColor("RANDOM")
         return message.channel.send(kimlikembed);
     };

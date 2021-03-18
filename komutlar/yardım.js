@@ -16,9 +16,9 @@ const nobles = new Discord.MessageEmbed()
 > **» ${process.env.prefix}gay :** Etiketlediğiniz Kişinin Gaylik Düzeyini Öğrenirsiniz.
 > **» ${process.env.prefix}yılbaşı :** Yılbaşı Sayacı.
 > **» ${process.env.prefix}kaçcm :** :D?
-> **» !efkarım :** Şu anda olan efkarınızı ölçersiniz.
-> **» !ejderha-yazı :** Ejderha temalı logo üretirsiniz.
-> **» !espri :** Bot sizin için espri yapar.
+> **» ${process.env.prefix}kimlik :** Rastgele Kimlik Oluşturursunuz.
+> **» ${process.env.prefix}liderlik :** Coin Sıralamasını Gösterir.
+> **» ${process.env.prefix}balık-tut :** Balık Tutarsınız.
 > **» !hesapla :** Belirttiğiniz matematik işlemini bot yapar.
 > **» !kartopu :** Etiketlediğiniz kişiye kartopu atarsınız.
 > **» !kaç-cm :** Bot malafat uzunluğunuzu söyler.

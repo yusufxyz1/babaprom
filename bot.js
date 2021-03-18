@@ -63,7 +63,7 @@ if(xd1 == xd2) {
  db.delete(`zamanı.${message.guild.id+message.channel.id}`)
  db.delete(`zamanı1.${message.guild.id+message.channel.id}`)
 
-message.channel.send(`risi yere 175 Coin düşürdü! Almak için 5 saniye içinde ${process.env.prefix}al yaz`).then(() => {
+message.channel.send(`Birisi yere 175 Coin düşürdü! Almak için 5 saniye içinde **${process.env.prefix}al** yaz`).then(() => {
 	message.channel.awaitMessages(m => m.content === `${process.env.prefix}al`, { max: 1, time: 5000, errors: ['time'] })
 		.then(collected => {
 			message.channel.send(`${collected.first().author} parayı aldı!`);
