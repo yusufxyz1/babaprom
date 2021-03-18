@@ -2,6 +2,7 @@ dependencies:
   chalk: 4.1.0
   common-tags: 1.8.0
   discord.js: 12.5.1
+  discord.js-commando: 0.12.2
   express: 4.17.1
   fs: 0.0.2
   jimp: 0.16.1
@@ -689,6 +690,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+  /discord.js-commando/0.12.2:
+    dependencies:
+      common-tags: 1.8.0
+      emoji-regex: 9.2.2
+      is-promise: 4.0.0
+      require-all: 3.0.0
+    dev: false
+    engines:
+      node: '>=12.0.0'
+    resolution:
+      integrity: sha512-3C3VpVVi/GJDImhQ9TKJhhHdK00XVzqbX722Zti6LEs5oA1zydjH89+tgIUkSF7bvaLpZKOfFy0MIeNWv+uL9g==
   /discord.js/12.5.1:
     dependencies:
       '@discordjs/collection': 0.1.6
@@ -712,6 +724,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  /emoji-regex/9.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
   /encodeurl/1.0.2:
     dev: false
     engines:
@@ -958,6 +974,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-lw7DUp0aWXYg+CBCN+JKkcE0Q2RayZnSvnZBlwgxHBQhqt5pZNVy4Ri7H9GmmXkdu7LUthszM+Tor1u/2iBcpQ==
+  /is-promise/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -1350,6 +1370,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
+  /require-all/3.0.0:
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha1-Rz1JcEvjEBFc4ST3c4Ox69hnExI=
   /safe-buffer/5.1.2:
     dev: false
     resolution:
@@ -1660,6 +1686,7 @@ specifiers:
   chalk: ^4.1.0
   common-tags: ^1.8.0
   discord.js: ^12.5.1
+  discord.js-commando: ^0.12.1
   express: ^4.17.1
   fs: ^0.0.2
   jimp: ^0.16.1
