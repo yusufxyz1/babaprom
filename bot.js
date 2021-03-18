@@ -20,7 +20,7 @@ const log = message => {
 ///////////// KOMUTLAR BAŞ
 
 client.on('message', async (msg , bot)=> { 
-if(!msg.content.startsWith("e.liderlik")) return;
+if(!msg.content.startsWith(`${process.env.prefix}liderlik`)) return;
  const sorted = msg.guild.members.cache.filter(u => !u.bot).array().sort((a, b) => { return (db.fetch(`para.${b.user.id + msg.guild.id}`) ? db.fetch(`para.${b.user.id + msg.guild.id}`) : 0) - (db.fetch(`para.${a.user.id + msg.guild.id}`) ? db.fetch(`para.${a.user.id + msg.guild.id}`) : 0) });
     const top10 = sorted.splice(0, 5)
      const mappedCoin = top10.filter(o => !o.bot).map(s => db.fetch(`para.${s.user.id + msg.guild.id}`) || 0)

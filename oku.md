@@ -17,3 +17,4 @@ Oynuyor events/ready.js İçinde
 - İstatistik
 - Gay
 - Yılbaşı
+- Coin Sistemi (Bot.js 23. satır'dan 78. satıra kadar)
