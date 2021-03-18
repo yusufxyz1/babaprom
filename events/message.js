@@ -7,8 +7,8 @@ module.exports = async message => {
     process.env.prefix;
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
-  let command = message.content.split(" ")[0].slice(prefix.length);
-  let params = message.content.split(" ").slice(1);
+  let args = message.content.split(" ").slice(2);
+    let command = message.content.split(" ")[1];
   let perms = client.elevation(message);
   let cmd;
   if (client.commands.has(command)) {
@@ -18,6 +18,6 @@ module.exports = async message => {
   }
   if (cmd) {
     if (perms < cmd.conf.permLevel) return;
-    cmd.run(client, message, params, perms);
+    cmd.run(client, message, args, perms);
   }
 };
