@@ -5,6 +5,7 @@ const fs = require("fs");
 const moment = require("moment");
 const Jimp = require("jimp");
 const token = process.env.token;
+const ayarlar = require("./ayarlar.json");
 const db = require("quick.db");
 var prefix = process.env.prefix;
 
@@ -19,18 +20,18 @@ const log = message => {
 ///////////// KOMUTLAR BAŞ
 
 client.on('message', async (msg , bot)=> { 
-if(!msg.content.startsWith(`${process.env.prefix}liderlik`)) return;
+if(!msg.content.startsWith("e.liderlik")) return;
  const sorted = msg.guild.members.cache.filter(u => !u.bot).array().sort((a, b) => { return (db.fetch(`para.${b.user.id + msg.guild.id}`) ? db.fetch(`para.${b.user.id + msg.guild.id}`) : 0) - (db.fetch(`para.${a.user.id + msg.guild.id}`) ? db.fetch(`para.${a.user.id + msg.guild.id}`) : 0) });
     const top10 = sorted.splice(0, 5)
      const mappedCoin = top10.filter(o => !o.bot).map(s => db.fetch(`para.${s.user.id + msg.guild.id}`) || 0)
      const mappedName = top10.filter(o => !o.bot).map(s => s.user.tag);
-let nobles = []
+let kedjik = []
  for(var i = 0; i < 5; i++) {
             var coin = mappedCoin[i]
             var name = mappedName[i]
 
             if(coin > 0) {
-              nobles.push(`[${i + 1}] > ${name}\n  Coin: ${coin} \n\n`) 
+              kedjik.push(`[${i + 1}] > ${name}\n  Coin: ${coin} \n\n`) 
             }
 
            
@@ -38,14 +39,14 @@ let nobles = []
 let embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("Coin Sıralaması!")
-.setDescription(nobles)
+.setDescription(kedjik)
 msg.channel.send(embed)
 })
 client.on('message', async (message , bot)=> { 
 const db = require("quick.db")
 const random = require("random");
 if(message.author.bot) return;
-if(message.channel.id !== "820261191422836756") return;
+if(message.channel.id !== ayarlar.coinSistemiAtılacakKanalID) return;
 let max 
 let min
 let qwe = random.int(min = 1, max = 5)
@@ -62,8 +63,8 @@ if(xd1 == xd2) {
  db.delete(`zamanı.${message.guild.id+message.channel.id}`)
  db.delete(`zamanı1.${message.guild.id+message.channel.id}`)
 
-message.channel.send(`Birisi yere 175 Coin düşürdü! Almak için 5 saniye içinde ${process.env.prefix}al yaz!`).then(() => {
-	message.channel.awaitMessages(m => m.content === `${process.env.prefix}al`, { maxMatches: 1, time: 5000, errors: ['time'] })
+message.channel.send(`risi yere 175 Coin düşürdü! Almak için 5 saniye içinde ${process.env.prefix}al yaz`).then(() => {
+	message.channel.awaitMessages(m => m.content === `${process.env.prefix}al`, { max: 1, time: 5000, errors: ['time'] })
 		.then(collected => {
 			message.channel.send(`${collected.first().author} parayı aldı!`);
             db.add(`para.${collected.first().author.id + message.guild.id}`, 175)
@@ -75,6 +76,7 @@ message.channel.send(`Birisi yere 175 Coin düşürdü! Almak için 5 saniye iç
 });
 }
 })
+
 
 
 ////////////// KOMUTLAR SON
