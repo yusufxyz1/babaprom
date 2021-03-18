@@ -22,3 +22,5 @@ Oynuyor events/ready.js İçinde
 - Balık Tut
 - Trump
 - Rozet
+- Evlenme Teklifi
+- Kral Ol

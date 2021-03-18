@@ -49,7 +49,7 @@ if(message.author.bot) return;
 if(message.channel.id !== ayarlar.coinSistemiAtılacakKanalID) return;
 let max 
 let min
-let qwe = random.int(min = 1, max = 5)
+let qwe = random.int(min = 100, max = 500)
 let xd1 = db.fetch(`zamanı.${message.guild.id+message.channel.id}`)
 if(!xd1) {
 db.set(`zamanı.${message.guild.id+message.channel.id}`,qwe)

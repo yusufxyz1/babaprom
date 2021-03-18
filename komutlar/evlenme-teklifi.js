@@ -9,7 +9,7 @@ let mention = message.mentions.users.first()
 if(!mention) return message.channel.send(`Hayatının aşkını bulamadım.. \`💔\``)
   
 message.channel.send(`${mention}, bak bu ${message.author.username} seninle evlenmek istiyor.
-(ben olsam hemen tik işaretine tıklardım, bu çocuk kaçmaz)`).then(async nobles => {
+Kabul Ediyor musun?`).then(async nobles => {
   
 nobles.react(`✅`)
 nobles.react(`❌`)
