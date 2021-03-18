@@ -2,8 +2,8 @@ const db = require("quick.db");
 
 module.exports = async message => {
   let client = message.client;
-  let prefix =
-    (await require("quick.db").fetch(`prefix_${message.guild.id}`)) ||
+  let prefix = 
+      (await require("quick.db").fetch(`prefix_${message.guild.id}`)) ||
     process.env.prefix;
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
