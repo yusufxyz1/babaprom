@@ -24,3 +24,5 @@ Oynuyor events/ready.js İçinde
 - Rozet
 - Evlenme Teklifi
 - Kral Ol
+- Yazı Tura
+- Öp

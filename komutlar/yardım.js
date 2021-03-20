@@ -23,8 +23,8 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 > **» ${process.env.prefix}rozet :** Rozetlerinizi Gösterir.
 > **» ${process.env.prefix}evlenme-teklifi :** Evlenme Teklifi Edersin. ^^
 > **» ${process.env.prefix}kralol :** Kral Olursun.
-> **» !tokat :** Etiketlediğiniz kişiyi tokatlarsınız.
-> **» !yazıtura :** Bot ile yazı-tura oyununu oynarsınız.
+> **» ${process.env.prefix}yazı-tura :** Yazı mı Tura mı?
+> **» ${process.env.prefix}öp :** Birini Öpersin.
 > **» !yılbaşı :** Yılbaşının gelmesine ne kadar yaklaştığınızı gösterir.
 > **» !öp :** Etiketlediğiniz kişiyi öpmenize yarar.
 > **» !şekerye :** Bot size şeker ikram eder.
