@@ -26,3 +26,4 @@ Oynuyor events/ready.js İçinde
 - Kral Ol
 - Yazı Tura
 - Öp
+- Duello
