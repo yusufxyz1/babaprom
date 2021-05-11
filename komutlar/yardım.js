@@ -5,12 +5,12 @@ exports.run = (client, message) => {
 
 const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmiştir
 
-.setColor("RANDOM")
+.setColor("GREEN")
 .setTitle(`**▬▬▬▬▬▬[** ©️ **Eğlence Bot** ©️ **]▬▬▬▬▬▬**  \n\n> :floppy_disk: __${process.env.prefix}istatistik__ **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix:** __${process.env.prefix}__ `)
 .setThumbnail(client.user.avatarURL)
 .setDescription(`
 
-▬▬▬▬▬▬[ :closed_lock_with_key: **Eğlence Komutları** :closed_lock_with_key: ]▬▬▬▬▬▬
+▬▬▬▬▬▬[ **yDarK BOT | Eğlence Komutları** ]▬▬▬▬▬▬
 
 > **» ${process.env.prefix}adamasmaca :** Adam Asmaca Oynarsınız.
 > **» ${process.env.prefix}gay :** Etiketlediğiniz Kişinin Gaylik Düzeyini Öğrenirsiniz.
@@ -45,7 +45,7 @@ exports.conf = {
 };
   
   exports.help = {
-    name: 'yardım', 
+    name: 'eğlence', 
     description: 'The Help Command',
     usage: 'help'
 };
