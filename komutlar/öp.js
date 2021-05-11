@@ -40,7 +40,7 @@ exports.run = (client, message, args, tools) => {
   ) {
     const candyEmb = new Discord.MessageEmbed()
       .setDescription(
-        `\`${message.mentions.members.first().user.username}#${message.mentions.members.first().user.discriminator}\` senii, \`${message.author.username}#${message.author.discriminator}\` öptü.`
+        `\`${message.mentions.members.first().user.username}#${message.mentions.members.first().user.discriminator}\` senii, \`${message.author.username}#${message.author.discriminator}\` öptü. \<a:BKalpGif:747069800978841651>`
       )
       .setImage(resimler);
     message.channel.send({ embed: candyEmb });
@@ -48,7 +48,7 @@ exports.run = (client, message, args, tools) => {
   }
   if (message.author.id === kullanıcı.id) {
     const candyEmb = new Discord.MessageEmbed()
-      .setTitle(`Kendini öpecek kadar yalnız mısın? 😟`)
+      .setTitle(`Kendini öpecek kadar yalnız mısın? \<:pandasad:778600825261785088>`)
       .setImage(resimler);
     message.channel.send({ embed: candyEmb });
   }
