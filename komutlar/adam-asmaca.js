@@ -6,12 +6,12 @@ module.exports.run = async (bot, message, args) => {
   let kelime= [
   "elma",
   "armut",
-  "mahmut",
+  "kiraz",
   "eşya",
   "sunucu",
-  "ismail",
-  "eşek",
-  "anlox",
+  "makarna",
+  "marka",
+  "sunucu",
   "siber",
   "kral",
   "biziz",
@@ -19,11 +19,13 @@ module.exports.run = async (bot, message, args) => {
   "köpek",
   "salata",
   "biber",
-  "camii",
+  "cami",
   "maymun",
   "aslan",
-  "ali",
-  "bali",
+  "kaçak",
+  "anan",
+  "bal",
+  "sevgi",
     
  
 ]
