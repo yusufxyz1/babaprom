@@ -15,8 +15,8 @@ exports.run = async (client, message, args) => {
     if (gn.getMonth() == 0 && gn.getDate() == 1) {
         son = 'January 1 ' + (gn.getFullYear()) + " 00:00:00";
     };
-        var t = sayac(son);
-        message.channel.send(new Discord.MessageEmbed().setDescription(`▬▬▬▬▬▬[ ⏳ **Yılbaşı Sayacı** ⏳ ]▬▬▬▬▬▬\n\n**Kalan Gün:** ${t.gun} :fire: \n **Kalan Saat:** ${t.saat} :fire:  \n **Kalan Dakika:** ${t.dakika} :fire:  \n **Kalan Saniye:** ${t.saniye} :fire: `))
+        var t = sayac(son);      
+message.channel.send(new Discord.MessageEmbed().setDescription(` \<a:Brainbowrain:747089225551314956> **Yılbaşı Sayacı** \<a:Brainbowrain:747089225551314956> \n\n**Kalan Gün:** ${t.gun} :fire: \n **Kalan Saat:** ${t.saat} :fire:  \n **Kalan Dakika:** ${t.dakika} :fire:  \n **Kalan Saniye:** ${t.saniye} :fire: `))
         if(t.total<=0){
             message.channel.send(new Discord.MessageEmbed().setDescription(`⌛️ Yeni Yılınız Kutlu Olsun! ⌛️`)) 
         }

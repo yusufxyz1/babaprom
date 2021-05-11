@@ -6,19 +6,18 @@ exports.run = (client, message) => {
 const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmiştir
 
 .setColor("GREEN")
-.setTitle(`**Şuanda kullanılan prefix:** __${process.env.prefix}__ `)
+.setTitle(``)
 .setThumbnail(client.user.avatarURL)
 .setDescription(`
 
 \<a:Bcollwolf:780848550790955018> **yDarK BOT | Eğlence Komutları** \<a:Bcollwolf:780848550790955018>
 
-\<a:Dblobhang:758618011329495050> **| ${process.env.prefix}adamasmaca | :** Adam Asmaca Oynarsınız.
-\<a:Gay:841214627387277322> **| ${process.env.prefix}gay | :** Etiketlediğiniz Kişinin Gaylik Düzeyini Öğrenirsiniz.
-\<a:Bretarded:758618001637113886> **| ${process.env.prefix}lez | :** Etiketlediğiniz Kişinin Lezbiyenlik Düzeyini Öğrenirsiniz.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}adamasmaca | :** Adam Asmaca Oynarsınız.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}gay | :** Etiketlediğiniz Kişinin Gaylik Düzeyini Öğrenirsiniz.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}lez | :** Etiketlediğiniz Kişinin Lezbiyenlik Düzeyini Öğrenirsiniz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}yılbaşı | :** Yılbaşı Sayacı.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kaçcm | :** :D?
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kimlik | :** Rastgele Kimlik Oluşturursunuz.
-\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}liderlik | :** Coin Sıralamasını Gösterir.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}balık-tut | :** Balık Tutarsınız.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}trump | :** Trump Tweet Atar.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}rozet | :** Rozetlerinizi Gösterir.
@@ -29,7 +28,8 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}duello | :** Birisiyle Duello Atarsın.
 
 
-**Linkler ->** **[Destek Sunucusu](${ayarlar.destekSunucusuDavetLinki})** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=767317246119903243&scope=bot&permissions=805314622)**`)
+**» Linkler** 
+**[Destek Sunucusu](${ayarlar.destekSunucusuDavetLinki})** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=767317246119903243&scope=bot&permissions=805314622)**`)
  
 .setFooter(client.user.username + "", client.user.avatarURL)
 .setTimestamp();
