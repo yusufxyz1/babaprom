@@ -9,10 +9,10 @@ let mention = message.mentions.users.first()
 if(!mention) return message.channel.send(`Hayatının aşkını bulamadım.. \`💔\``)
   
 message.channel.send(`${mention}, bak bu ${message.author.username} seninle evlenmek istiyor.
-Kabul Ediyor musun?`).then(async nobles => {
+Kabul Ediyor musun? \<a:BKalpGif:747069800978841651>`).then(async nobles => {
   
-nobles.react(`✅`)
-nobles.react(`❌`)
+nobles.react(`\<a:BOnaylamak2Gif:747069856393723904>`)
+nobles.react(`\<a:BReddetmekGif:747069829772476418>`)
 
 let evet_Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id !== client.user.id && user.id === mention.id
 let evet = nobles.createReactionCollector(evet_Filter, { time: 0 });
