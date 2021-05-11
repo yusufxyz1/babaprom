@@ -1,8 +1,6 @@
-# YOUTUBE KANALIMA ABONE OLMAYI UNUTMAYIN
+# Bizi Tercih Ettiginiz İçin Teşekkürler
 
-[Nobles Youtube Kanalına Gitmek İçin Tıkla](https://www.youtube.com/noblesyt)
-
-[Nobles Discord Sunucusuna Gitmek İçin Tıkla](https://discord.gg/Rs5ss84)
+[yDarKDayS Discord Sunucusuna Gitmek İçin Tıkla](https://discord.gg/tDpq2SAEF4)
 
 # Bilgiler
 
