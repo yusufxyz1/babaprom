@@ -10,7 +10,7 @@ exports.run = (client, message, params) => {
     return message.author.send(ozelmesajuyari); }
     if (message.channel.type !== 'dm') {
       const sunucubilgi = new Discord.MessageEmbed()
-    .setAuthor(message.author.username + ' Artık Kral Oldun!!!')
+    .setAuthor(message.author.username + ' Artık Kral Oldun!!! ')
     .setColor(3447003)
     .setTimestamp()
     .setDescription('')

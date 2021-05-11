@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
   
   if (opponent.bot) return message.reply('Botlar ile oynayamazsın!');
   if (opponent.id === message.author.id) return message.reply('Kendin ile düello atamazsın!');
-		if (this.fighting.has(message.channel.id)) return message.reply('Kanal başına sadece bir düello meydana gelebilir.');
+		if (this.fighting.has(message.channel.id)) return message.reply('Kanal başına sadece bir düello meydana gelebilir !!!');
 		this.fighting.add(message.channel.id);
 		try {
 			if (!opponent.bot) {
