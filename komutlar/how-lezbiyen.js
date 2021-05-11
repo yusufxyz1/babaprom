@@ -10,7 +10,7 @@ if(message.mentions.members.first()) username = message.mentions.members.first()
 if(message.mentions.users.first()) username = message.mentions.users.first().username+' is';
 
 let random = Math.floor(Math.random(100) * 100);
-return message.channel.send(new Discord.MessageEmbed().setColor('RANDOM').setTitle('Gay Yüzdesi Ölçer').setDescription(`<@${username}> Kullanıcısı %${random} gay :rainbow_flag: \<a:Gay:841214627387277322>`));
+return message.channel.send(new Discord.MessageEmbed().setColor('#E91E63').setTitle('Lezbiyen Yüzdesi Ölçer').setDescription(`<@${username}> **Kullanıcısı** %${random} **Lezbiyen** \<a:rainbowtwerk:835122996342554666>`));
 
 };
 exports.conf = {
@@ -21,5 +21,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'gay'
-}; 
+  name: 'lez'
+};
