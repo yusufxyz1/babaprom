@@ -20,7 +20,7 @@ if(avatar.endsWith(".gif?size=1024")) {
 
 let embed = new Discord.MessageEmbed()
 .setAuthor(user.tag + '', user.displayAvatarURL())
-.setDescription(`**İşte Avatar**
+.setDescription(` \<a:RainbowSonsuzGif:747069857652277259> **İşte Avatar**
 **[[PNG]](${user.displayAvatarURL({ format: 'png', size: 1024 })})** | **[[JPEG]](${user.displayAvatarURL({ format: 'jpeg', size: 1024 })})** | **[[GIF]](${user.displayAvatarURL({ format: 'gif', size: 1024 })})** | **[[WEBP]](${user.displayAvatarURL({ format: 'webp', size: 1024 })})**`)
 .setImage(user.displayAvatarURL({dynamic: true, size: 1024}))
 .setColor("RANDOM")
@@ -30,7 +30,8 @@ message.channel.send(embed)
 
   let embed = new Discord.MessageEmbed()
 .setAuthor(user.tag + '', user.displayAvatarURL())
-.setDescription(`**[[PNG]](${user.displayAvatarURL({ format: 'png',  size: 1024 })})** | **[[JPEG]](${user.displayAvatarURL({ format: 'jpeg',  size: 1024 })})** | **~~[GIF]~~** | **[[WEBP]](${user.displayAvatarURL({ format: 'webp',  size: 1024 })})**`)
+.setDescription(` \<a:sigarakurbaga:838059274684727316> **İşte Nitrosuz Avatar**
+**[[PNG]](${user.displayAvatarURL({ format: 'png',  size: 1024 })})** | **[[JPEG]](${user.displayAvatarURL({ format: 'jpeg',  size: 1024 })})** | **~~[GIF]~~** | **[[WEBP]](${user.displayAvatarURL({ format: 'webp',  size: 1024 })})**`)
 .setImage(user.displayAvatarURL({dynamic: true, size: 1024}))
 .setColor("RANDOM")
 message.channel.send(embed)
