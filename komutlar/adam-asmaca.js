@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   "sunucu",
   "siber",
   "kral",
-  "biziz",
+  "taşlık",
   "yılbaşı",
   "köpek",
   "salata",
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
  
 ]
  
-        if (oyndurum.has(message.channel.id)) return message.reply('Kanal başına sadece bir adam asmaca oyunu meydana gelebilir.');
+        if (oyndurum.has(message.channel.id)) return message.reply('**Kanal başına sadece bir adam asmaca oyunu meydana gelebilir.**');
 
         try {
             const cevap = kelime[Math.floor(Math.random() * kelime.length)].toLowerCase();
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
             const display = new Array(cevap.length).fill('_');
             while (cevap.length !== confirmation.length && point < 6) {
                 await message.channel.send(stripIndents`
-                    ${displayText === null ? '**Kobra Adam Asmaca**!' : displayText ? '**Çok iyisin!**' : '**Yanlış Harf!**'}
+                    ${displayText === null ? '**Kobra Adam Asmaca**!' : displayText ? ' \<a:Ykalp:846249823833554955> **Çok iyisin!**' : ' \<a:Dablobsadpats:758618023027802162> **Yanlış Harf!**'}
                          **Kelime:**    \`${display.join(' ')}\`
                     **Yanlış Harfler:** ${yanlış.join(', ') || 'Yok'}
                     \`\`\`
