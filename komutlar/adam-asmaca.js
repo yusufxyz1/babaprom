@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
  
 ]
  
-        if (oyndurum.has(message.channel.id)) return message.reply('**Kanal başına sadece bir adam asmaca oyunu meydana gelebilir.**');
+        if (oyndurum.has(message.channel.id)) return message.reply(' \<a:redtick:778594981962579998> **Kanal başına sadece bir adam asmaca oyunu meydana gelebilir.**');
 
         try {
             const cevap = kelime[Math.floor(Math.random() * kelime.length)].toLowerCase();
@@ -42,9 +42,9 @@ module.exports.run = async (bot, message, args) => {
             const display = new Array(cevap.length).fill('_');
             while (cevap.length !== confirmation.length && point < 6) {
                 await message.channel.send(stripIndents`
-                    ${displayText === null ? '**Kobra Adam Asmaca**!' : displayText ? ' \<a:Ykalp:846249823833554955> **Çok iyisin!**' : ' \<a:Dablobsadpats:758618023027802162> **Yanlış Harf!**'}
-                         **Kelime:**    \`${display.join(' ')}\`
-                    **Yanlış Harfler:** ${yanlış.join(', ') || 'Yok'}
+                    ${displayText === null ? ' \<a:RainbowOkGif:747069805189791784> **yDarK BOT Adam Asmaca**!' : displayText ? ' \<a:Ykalp:846249823833554955> **Çok iyisin!**' : ' \<a:Dablobsadpats:758618023027802162> **Yanlış Harf!**'}
+                        \<a:RainbowOkGif:747069805189791784> **Kelime:**    \`${display.join(' ')}\`
+                   \<a:RainbowOkGif:747069805189791784> **Yanlış Harfler:** ${yanlış.join(', ') || 'Yok'}
                     \`\`\`
                     _________
                     |    |
@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
                     time: 300000
                 });
                 if (!guess.size) {
-                    await message.channel.send('Zamanın doldu!');
+                    await message.channel.send(' \<:pandasad:778600825261785088> **Zamanın doldu!**');
                     break;
                 }
                 const choice = guess.first().content.toLowerCase();
@@ -85,8 +85,8 @@ module.exports.run = async (bot, message, args) => {
                 }
             }
             oyndurum.delete(message.channel.id);
-            if (cevap.length === confirmation.length || tahmin) return message.channel.send(`**Tebrikler kelimeyi buldun! **${cevap}!`);
-            return message.channel.send(`Maalesef bilemedin kelime bu: **${cevap}**`);
+            if (cevap.length === confirmation.length || tahmin) return message.channel.send(` \<:Ppandacool:778618007852154890> **Tebrikler kelimeyi buldun! **${cevap}!`);
+            return message.channel.send(` \<:Psadpanda:778600471396089877> Maalesef bilemedin kelime bu: **${cevap}**`);
         } catch (err) {
             oyndurum.delete(message.channel.id);
             return message.reply(`Olamaz! Bir Hata Verdi: \`${err.message}\``);
