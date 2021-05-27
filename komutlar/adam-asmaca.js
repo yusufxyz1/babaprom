@@ -10,10 +10,10 @@ module.exports.run = async (bot, message, args) => {
   "eşya",
   "sunucu",
   "makarna",
-  "marka",
+  "eczane",
   "sunucu",
   "siber",
-  "kral",
+  "sarmaşık",
   "taşlık",
   "yılbaşı",
   "köpek",
@@ -23,9 +23,13 @@ module.exports.run = async (bot, message, args) => {
   "maymun",
   "aslan",
   "kaçak",
-  "anan",
+  "kaplan",
   "bal",
-  "sevgi",
+  "piskopat",
+  "rahat",
+  "sebeb",
+  "karı",
+  "sevgili",
     
  
 ]
