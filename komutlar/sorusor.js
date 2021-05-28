@@ -13,8 +13,8 @@ exports.run = function(client, message, args) {
   
     var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
 
-    if(!soru) return message.reply(new Discord.MessageEmbed().setColor("RANDOM").setTitle('Doğru kullanım `dd!sor soru`'))
-    else message.channel.send(new Discord.MessageEmbed().setColor("RANDOM").setTitle(`Soru: ${soru}\n\nCevap: ${cevap}`))
+    if(!soru) return message.reply(new Discord.MessageEmbed().setColor("RANDOM").setTitle('\<a:Bsulu:758618028891570197> Doğru kullanım `[dd!sor soru]`'))
+    else message.channel.send(new Discord.MessageEmbed().setColor("RANDOM").setTitle(`\<a:BAnimeEyes:758618011207991316> Sorun: ${soru}\n\n \<a:Bfkmdkdkm:758618043050885120>Cevap: ${cevap}`))
 
 };  
 
