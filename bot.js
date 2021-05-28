@@ -178,8 +178,8 @@ client.login(token);
 const discord = require('discord.js')
 exports.run = async(client, message,args) => {
 
-message.react('396548322053062656');// emoji id
-const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'onay'); // emoji ismi
+message.react('846249823833554955');// emoji id
+const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'Ykalp'); // emoji ismi
  message.react(reactionEmoji);
 
 };
@@ -187,5 +187,5 @@ exports.conf = {
 aliases: []
 };
 exports.help = {
-name: "! ⚘ ! YUSUŦ ΞЛΞS ᵈᵃʳᵏ"
+name: "sa"
 };
