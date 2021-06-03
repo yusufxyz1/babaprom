@@ -26,7 +26,7 @@ moment.locale('tr-TR');
             return days + (days == 1 ? " gün" : " gün") + " önce";
         };
 
-  if (!member) return message.reply('Bir kullanıcı belirt g!profil @Gnarge veya g!profil <Kullanıcı_ID> ')
+  if (!member) return message.reply('Bir kullanıcı belirt dd!profil @Gnarge veya dd!profil <Kullanıcı_ID> ')
 
         let serverSize = message.guild.memberCount;
 
@@ -34,7 +34,7 @@ moment.locale('tr-TR');
       .setAuthor(user.tag, user.avatarURL() || user.defaultavatarURL())
       .setThumbnail(user.avatarURL() || user.defaultavatarURL())
       .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
-      .addField('Üye bilgisi:',`**Kullanıcı İsmi:** ${member.displayName}\n**Katılım Tarihi:** ${moment.utc(member.joinedAt).format('Do MMMM YYYY')} - ${checkDays(member.joinedAt)} \n**Rolleri:** ${member.roles.cache.sort((b, a) => { return a.position - b.position }).map(role => `${role}`).join(" | ")}`, false)        .addField('Kullanıcı bilgisi:',  `\n**Tag**: ${member.user.tag}\n**ID:** ${member.user.id}\n**Kuruluş Tarihi**: ${moment.utc(user.createdAt).format('Do MMMM YYYY')} - ${checkDays(user.createdAt)}`, false)
+      .addField('\<a:ModernOnayGif:747069854347165827> Üye bilgisi:',`**Kullanıcı İsmi:** ${member.displayName}\n**Katılım Tarihi:** ${moment.utc(member.joinedAt).format('Do MMMM YYYY')} - ${checkDays(member.joinedAt)} \n**Rolleri:** ${member.roles.cache.sort((b, a) => { return a.position - b.position }).map(role => `${role}`).join(" | ")}`, false)        .addField('\<a:Bblacktick:778592760168185856> Kullanıcı bilgisi:',  `\n**Tag**: ${member.user.tag}\n**ID:** ${member.user.id}\n**Kuruluş Tarihi**: ${moment.utc(user.createdAt).format('Do MMMM YYYY')} - ${checkDays(user.createdAt)}`, false)
       .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.avatarURL())
       .setTimestamp()
      return message.channel.send(embed)
