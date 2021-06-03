@@ -16,7 +16,7 @@ exports.run = (client, message) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [""],
+  aliases: ["yazıtura"],
   permLevel: 0
 };
 
