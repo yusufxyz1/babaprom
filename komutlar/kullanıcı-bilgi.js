@@ -1,93 +1,55 @@
-const Discord = require('discord.js')
-const moment = require('moment')
-const client = new Discord.Client();
+const Discord = require("discord.js");
+const moment = require("moment")
+require('moment-duration-format');
 
-const botadi = "yDarK BOT"
+exports.run = async(client, message, args) => {
 
-exports.run = async (bot, msg, args) => {
-        let simdikitarih = moment.utc(msg.createdAt).format('DD MM YYYY');
+  if(message.channel.type == "dm")  return;
+  if(message.channel.type !== "text") return;
 
-        let user = msg.mentions.users.first() || msg.author;
+  var user = message.mentions.users.first() || message.client.users.cache.get(args[0]) || message.client.users.cache.find(m => m.username === args.slice(0).join(" ")) || message.author; message.author;
+  const member = message.guild.member(user)
+  let kisi = client.users.cache.get(member.id);
 
-        let userinfo = {};
-        userinfo.avatar= user.displayAvatarURL;
-        userinfo.id = user.id;
-        userinfo.od1 = msg.guild.members.get(user.id).user.presence.game || "Oynadığı bir oyun yok"
-        userinfo.status = user.presence.status.toString()
-        .replace("dnd", `Rahatsız Etmeyin`)
-        .replace("online", `Çevrimiçi`)
-        .replace("idle", `Boşta`)
-        .replace("offline", `Çevrimdışı`)
-        userinfo.bot = user.bot.toString()
-        .replace("false", `Hayır`)
-        .replace("true", `Evet`)
-        userinfo.sonmesaj = user.lastMessage || "Son yazılan mesaj bulunamadı." || "Son yazılan mesaj gösterilemedi."
+moment.locale('tr-TR');
+      var userRoles
+        if (member.roles.size > 1) {
+            userRoles = `${member.roles.array().sort((a, b) => a.comparePositionTo(b)).slice(1).reverse().map(role => `**\`${role.name}\`**`)}`
+          } else {
+            userRoles = '`Bulunmuyor`'
+              }
+             
+  function checkDays(date) {
+            let now = new Date();
+            let diff = now.getTime() - date.getTime();
+            let days = Math.floor(diff / 86400000);
+            return days + (days == 1 ? " gün" : " gün") + " önce";
+        };
 
-        userinfo.dctarih = moment.utc(msg.guild.members.get(user.id).user.createdAt).format('**YYYY** [Yılında] MMMM [Ayında] dddd [Gününde] (**DD/MM/YYYY**)')
+  if (!member) return message.reply('Bir kullanıcı belirt g!profil @Gnarge veya g!profil <Kullanıcı_ID> ')
 
-        .replace("Monday", `**Pazartesi**`)
-        .replace("Tuesday", `**Salı**`)
-        .replace("Wednesday", `**Çarşamba**`)
-        .replace("Thursday", `**Perşembe**`)
-        .replace("Friday", `**Cuma**`)
-        .replace("Saturday", `**Cumartesi**`)
-        .replace("Sunday", `**Pazar**`)
-        .replace("January", `**Ocak**`)
-        .replace("February", `**Şubat**`)
-        .replace("March", `**Mart**`)
-        .replace("April", `**Nisan**`)
-        .replace("May", `**Mayıs**`)
-        .replace("June", `**Haziran**`)
-        .replace("July", `**Temmuz**`)
-        .replace("August", `**Ağustos**`)
-        .replace("September", `**Eylül**`)
-        .replace("October", `**Ekim**`)
-        .replace("November", `**Kasım**`)
-        .replace("December", `**Aralık**`)
-        userinfo.dctarihkatilma = moment.utc(msg.guild.members.get(user.id).joinedAt).format('**YYYY** [Yılında] MMMM [Ayında] dddd [Gününde] (**DD/MM/YYYY**)')
-        .replace("Monday", `**Pazartesi**`)
-        .replace("Tuesday", `**Salı**`)
-        .replace("Wednesday", `**Çarşamba**`)
-        .replace("Thursday", `**Perşembe**`)
-        .replace("Friday", `**Cuma**`)
-        .replace("Saturday", `**Cumartesi**`)
-        .replace("Sunday", `**Pazar**`)
-        .replace("January", `**Ocak**`)
-        .replace("February", `**Şubat**`)
-        .replace("March", `**Mart**`)
-        .replace("April", `**Nisan**`)
-        .replace("May", `**Mayıs**`)
-        .replace("June", `**Haziran**`)
-        .replace("July", `**Temmuz**`)
-        .replace("August", `**Ağustos**`)
-        .replace("September", `**Eylül**`)
-        .replace("October", `**Ekim**`)
-        .replace("November", `**Kasım**`)
-        .replace("December", `**Aralık**`)
-        const uembed = new Discord.RichEmbed()
-        .setAuthor(user.tag, userinfo.avatar)
-        .setThumbnail(userinfo.avatar)
-        .setTitle('Kullanıcı;')
-        .addField(`Şu anda oynadığı oyun`, userinfo.od1, false)
-        .addField(`Durum`, userinfo.status, false)
-        .setColor('03f2df')
-        .addField(`Katılım Tarihi (Sunucu)`, userinfo.dctarihkatilma, false)
-        .addField(`Katılım Tarihi (Discord)`, userinfo.dctarih, false)
-        .addField(`Kimlik:`, userinfo.id, true)
-        .addField(`Botmu:`, userinfo.bot, true)
-        .addField(`Roller:`, `${msg.guild.members.get(user.id).roles.filter(r => r.name !== "@everyone").map(r => r).join(' **|** ') || "**Bu kullanıcıda hiçbir rol bulunmuyor**"}`, false)
-        .addField(`Son gönderdiği mesaj:`, userinfo.sonmesaj, false)
-        .setFooter(`${botadi} || Kullanıcı Sistemi`)
-        msg.channel.send(uembed)
-    }
+        let serverSize = message.guild.memberCount;
+
+  const embed = new Discord.MessageEmbed()
+      .setAuthor(user.tag, user.avatarURL() || user.defaultavatarURL())
+      .setThumbnail(user.avatarURL() || user.defaultavatarURL())
+      .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
+      .addField('Üye bilgisi:',`**Kullanıcı İsmi:** ${member.displayName}\n**Katılım Tarihi:** ${moment.utc(member.joinedAt).format('Do MMMM YYYY')} - ${checkDays(member.joinedAt)} \n**Rolleri:** ${member.roles.cache.sort((b, a) => { return a.position - b.position }).map(role => `${role}`).join(" | ")}`, false)        .addField('Kullanıcı bilgisi:',  `\n**Tag**: ${member.user.tag}\n**ID:** ${member.user.id}\n**Kuruluş Tarihi**: ${moment.utc(user.createdAt).format('Do MMMM YYYY')} - ${checkDays(user.createdAt)}`, false)
+      .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.avatarURL())
+      .setTimestamp()
+     return message.channel.send(embed)
+                               
+        }
+
 exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: [],
-  permLevel: 0
+  aliases: ['profilim','kullanıcıbilgi','profil','kullanıcı bilgi','kb','bilgi','kullanıcı'],
+  permLevel: 0,
+  kategori: 'Genel'
 };
+
 exports.help = {
-  name: 'kullanıcı',
-  description: 'İstediğiniz kullanıcını bilgilerini gösterir.',
-  usage: 'kullanıcı'
+  name: 'kullanıcı-bilgi',
+  description: 'Kullanıcı hakkında bilgi verir.',
+  usage: 'kullanıcı-bilgi @Kullanıcı',
+
 };

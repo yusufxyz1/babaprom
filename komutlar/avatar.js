@@ -47,7 +47,7 @@ message.channel.send(embed)
  exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['avatarım','profil','profilim'],
+  aliases: ['avatarım'],
   permLevel: 0
 };
 
