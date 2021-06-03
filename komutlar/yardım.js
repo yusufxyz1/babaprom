@@ -16,6 +16,7 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}gay | :** Etiketlediğiniz Kişinin Gaylik Düzeyini Öğrenirsiniz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}lez | :** Etiketlediğiniz Kişinin Lezbiyenlik Düzeyini Öğrenirsiniz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}başlat | :** Akinatör Oynarsınız.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kullanıcıbilgi | :** Avatarınızı Görürsünüz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}avatar | :** Avatarınızı Görürsünüz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}sor | :** Bota Soru Sorarsınız.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}yılbaşı | :** Yılbaşı Sayacı.
