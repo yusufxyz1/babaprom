@@ -19,6 +19,7 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kullanıcıbilgi | :** Kullanıcı hakkında bilgi verir.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}avatar | :** Avatarınızı Görürsünüz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}sor | :** Bota Soru Sorarsınız.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}hesapla | :** Hesap Makinesi.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}corona| :** Türkiyedeki Corona Durumuna Bakarsınız.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}yılbaşı | :** Yılbaşı Sayacı.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kaçcm | :** :D?
@@ -31,7 +32,6 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}yazı-tura | :** Yazı mı Tura mı?
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}öp | :** Birini Öpersin.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}duello | :** Birisiyle Duello Atarsın.
-
 
 **» Linkler** 
 **[Destek Sunucusu](${ayarlar.destekSunucusuDavetLinki})** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=767317246119903243&scope=bot&permissions=805314622)**`)

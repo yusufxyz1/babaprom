@@ -4,9 +4,9 @@ exports.run = async(client, message, args) => {
     let kerem = args[0]
     let theartist = args[1]
     let theartistt = args[2]
-    if(!kerem) return message.channel.send("Hangi işlem olsun? toplama/çıkarma/bölme/çarpma. !hesap-makinesi toplama 2 2 gibi kullan.")
-    if(!theartist) return message.channel.send("1. sayıyı da yaz. Örnek Kullanım: !hesap-makinesi toplama 2 2")
-    if(!theartistt) return message.channel.send("2. sayıyı da yaz. Örnek Kullanım: !hesap-makinesi toplama 2 2")
+    if(!kerem) return message.channel.send("\<a:ablobaww1:758618024784691241> **Hangi işlem olsun?** *toplama/çıkarma/bölme/çarpma.* `dd!hesap-makinesi toplama 2 2` **gibi kullan.**")
+    if(!theartist) return message.channel.send("**1. sayıyı da yaz. Örnek Kullanım:** `dd!hesap-makinesi toplama 2 2`")
+    if(!theartistt) return message.channel.send("**2. sayıyı da yaz. Örnek Kullanım:** `dd!hesap-makinesi toplama 2 2`")
 
     let cikarma = theartist - theartistt
     let carpma = theartist * theartistt
