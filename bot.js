@@ -173,6 +173,8 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
+
+
 client.login(token);
 
 client.on("userUpdate",user=>{
