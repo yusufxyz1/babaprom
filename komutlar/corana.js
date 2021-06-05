@@ -13,7 +13,7 @@ fetch(`https://covid19.mathdro.id/api/countries/tr`)
     let kod = "`"
 const ardademr = new Discord.MessageEmbed()
 .setColor("RANDOM")
-.setTitle(`Türkiye - COVID-19 Toplam İstatistik`)
+.setTitle(`\<:Bbayrak:758613881396133908> Türkiye - COVID-19 Toplam İstatistik`)
 .addField('Vaka Sayısı',`${kod}${confirmed}${kod}`)
 .addField('İyileşen Kişi Sayısı',`${kod}${recovered}${kod}`)
 .addField('Vefat Sayısı',`${kod}${deaths}${kod}`)
