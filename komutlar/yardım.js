@@ -19,6 +19,7 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kullanıcıbilgi | :** Kullanıcı hakkında bilgi verir.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}avatar | :** Avatarınızı Görürsünüz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}sor | :** Bota Soru Sorarsınız.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}corona| :** Türkiyedeki Corona Durumuna Bakarsınız.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}yılbaşı | :** Yılbaşı Sayacı.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kaçcm | :** :D?
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kimlik | :** Rastgele Kimlik Oluşturursunuz.
