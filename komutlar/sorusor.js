@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const get = require("request")
+const get = require("quick.db")
 exports.run = async (client, message, args) => {
 let soru = args.join(' ');
 if(!soru) return message.reply('soru sormalısın')
