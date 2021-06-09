@@ -1,30 +1,24 @@
-const Discord = require('discord.js');
-
-const cevaplar = [
-    "Evet",
-    "Hayır",
-    "Belki",
-    "Olabilir",
-    "İmkansız"
-];
-
-exports.run = function(client, message, args) {
-    var soru = args.join(' ');
-  
-    var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
-
-    if(!soru) return message.reply(new Discord.MessageEmbed().setColor("RANDOM").setTitle('\<a:Bsulu:758618028891570197> Doğru kullanım `[dd!sor soru]`'))
-    else message.channel.send(new Discord.MessageEmbed().setColor("RANDOM").setTitle(`\<a:BAnimeEyes:758618011207991316> Sorun: ${soru}\n\n \<a:Bfkmdkdkm:758618043050885120>Cevap: ${cevap}`))
-
-};  
-
+const Discord = require("discord.js");
+const get = require("request")
+exports.run = async (client, message, args) => {
+let soru = args.join(' ');
+if(!soru) return message.reply('soru sormalısın')
+let encodedsoru = encodeURI(soru)
+get(`https://api.codare.fun/sor/${encodedsoru}`, async function (err, resp, body) { 
+body = JSON.parse(body); 
+if(err) return message.channel.send('hata oluştu')
+message.channel.send(body.cevap)
+    }) 
+}
 exports.conf = {
-  enabled: true, 
-  guildOnly: true, 
-  aliases: ['sorusor'],
-  permLevel: 0 
+  enabled: true,
+  guildOnly: false,
+  aliases: ["sor"],
+  permLevel: 0
 };
 
 exports.help = {
-  name: 'sor'
+  name: "sor",
+  description: "bota soru sorarsınız",
+  usage: "sor"
 };
