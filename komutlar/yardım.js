@@ -17,6 +17,7 @@ const nobles = new Discord.MessageEmbed()// fwhy code dan alınıp editlenmişti
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}lez | :** Etiketlediğiniz Kişinin Lezbiyenlik Düzeyini Öğrenirsiniz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}başlat | :** Akinatör Oynarsınız.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}kullanıcıbilgi | :** Kullanıcı hakkında bilgi verir.
+\<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}sunucubilgi | :** Sunucu hakkında bilgi verir.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}avatar | :** Avatarınızı Görürsünüz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}ydark | :** Botla Sohbet Edersiniz.
 \<a:RainbowOkGif:747069805189791784> **| ${process.env.prefix}hesapla | :** Hesap Makinesi.
@@ -46,7 +47,7 @@ return message.channel.send(nobles)
 exports.conf = {
     enabled: true, 
     guildOnly: false, 
-    aliases: [], 
+    aliases: ['eglence'], 
     permLevel: 0 
 };
   
