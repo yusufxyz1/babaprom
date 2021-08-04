@@ -17,6 +17,26 @@ const log = message => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
 };
 
+//------------------Değişen Oynuyor---------------------------\\
+
+const bot = new Discord.Client();
+
+var oyun = [
+`✨ Hadi Sohbet Edelim :)`,
+`🚀 discord.gg/ydarkdays`,
+`❤ yDarKDayS Abone OL`,
+`🌟 Prefix | (dd+)`
+]
+  
+client.on("ready", () => {
+setInterval(function() {
+
+         var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
+         client.user.setActivity(oyun[random], {"type": "WATCHING"});
+
+        }, 2 * 5000);
+});
+
 ///////////// KOMUTLAR BAŞ
 
 client.on('message', async (msg , bot)=> { 
