@@ -22,10 +22,10 @@ const log = message => {
 const bot = new Discord.Client();
 
 var oyun = [
-`✨ Hadi Sohbet Edelim :)`,
-`🚀 discord.gg/ydarkdays`,
-`❤ yDarKDayS Abone OL`,
-`🌟 Prefix | (dd+)`
+`✨ Hadi Sohbet Edelim`,
+`🚀 discord.gg/1768`,
+`❤ Beth ♥ 1768`,
+`🌟 Prefix | (beth)`
 ]
   
 client.on("ready", () => {
