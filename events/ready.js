@@ -16,6 +16,6 @@ module.exports = client => {
 
 }, 2 * 30000);
   
-  client.user.setStatus("idle"); //dnd, idle, online, offline
+  client.user.setStatus("online"); //dnd, idle, online, offline
   
 }

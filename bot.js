@@ -96,6 +96,9 @@ message.channel.send(`Birisi yere 175 Coin düşürdü! Almak için 5 saniye iç
 });
 }
 })
+client.on("ready", () => {
+client.channels.cache.get('932265636279750696').join();
+});
 
 
 
