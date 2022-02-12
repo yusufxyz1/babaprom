@@ -23,9 +23,9 @@ const bot = new Discord.Client();
 
 var oyun = [
 `✨ Hadi Sohbet Edelim`,
-`🚀 discord.gg/1768`,
-`❤ Beth ♥ 1768`,
-`🌟 Prefix | (beth)`
+`🚀 discord.gg/`,
+`❤ Bethül ♥ Uoozy`,
+`🌟 Prefix | (bethül)`
 ]
   
 client.on("ready", () => {
