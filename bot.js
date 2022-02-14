@@ -24,8 +24,8 @@ const bot = new Discord.Client();
 var oyun = [
 `✨ Hadi Sohbet Edelim`,
 `🚀 discord.gg/`,
-`❤ Bethül ♥ Uoozy`,
-`🌟 Prefix | (bethül)`
+`❤ Betül ♥ Uoozy | BlaserR`,
+`🌟 Prefix | (betül)`
 ]
   
 client.on("ready", () => {
@@ -97,7 +97,7 @@ message.channel.send(`Birisi yere 175 Coin düşürdü! Almak için 5 saniye iç
 }
 })
 client.on("ready", () => {
-client.channels.cache.get('932265636279750696').join();
+client.channels.cache.get('941392107862650983').join();
 });
 
 
