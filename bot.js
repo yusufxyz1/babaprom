@@ -97,7 +97,7 @@ message.channel.send(`Birisi yere 175 Coin düşürdü! Almak için 5 saniye iç
 }
 })
 client.on("ready", () => {
-client.channels.cache.get('941392107862650983').join();
+client.channels.cache.get('944319167631339582').join();
 });
 
 
