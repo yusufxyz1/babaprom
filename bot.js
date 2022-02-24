@@ -24,8 +24,8 @@ const bot = new Discord.Client();
 var oyun = [
 `✨ Hadi Sohbet Edelim`,
 `🚀 discord.gg/`,
-`❤ Betül ♥ Uoozy | BlaserR`,
-`🌟 Prefix | (betül)`
+`❤ Kaan | Uoozy | BlaserR`,
+`🌟 Prefix | (kaan)`
 ]
   
 client.on("ready", () => {
