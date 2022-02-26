@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const get = require("request")
 exports.run = async (client, message, args) => {
 let soru = args.join(' ');
-if(!soru) return message.reply(' **Sohbet Edelimmi ?** `bethül Birşey yaz :)`')
+if(!soru) return message.reply(' **Sohbet Edelimmi ?** `kaan Birşey yaz :)`')
 let encodedsoru = encodeURI(soru)
 get(`https://api.codare.fun/sor/${encodedsoru}`, async function (err, resp, body) { 
 body = JSON.parse(body); 
