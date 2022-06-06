@@ -22,10 +22,10 @@ const log = message => {
 const bot = new Discord.Client();
 
 var oyun = [
-`✨ İronMan`,
-`🚀 Tony Stark`,
-`❤ Robert Downey JR`,
-`🌟 Prefix | (tony)`
+`🤡🤡🤡`,
+`Abone Olun`,
+`Falcon Cansın`,
+`❤️ZyronX Code❤️`
 ]
   
 client.on("ready", () => {

@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const get = require("request")
 exports.run = async (client, message, args) => {
-let soru = args.join(' ');
+let soru = args.join('');
 if(!soru) return message.reply(' **Sohbet Edelimmi ?** `tony Birşey yaz :)`')
 let encodedsoru = encodeURI(soru)
 get(`https://api.codare.fun/sor/${encodedsoru}`, async function (err, resp, body) { 
@@ -13,7 +13,7 @@ message.channel.send(body.cevap)
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["sor", 'ydark', 'yDarK', 'bot', 'Bot', ''],
+  aliases: ["sr", 's', 'o', 'bot', 'Bot', ''],
   permLevel: 0
 };
 
