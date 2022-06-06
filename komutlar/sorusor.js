@@ -13,7 +13,7 @@ message.channel.send(body.cevap)
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["sr", 's', 'o', 'bot', 'Bot', ''],
+  aliases: ["sr", 's', 'or', 'bot', 'Bot', ''],
   permLevel: 0
 };
 
