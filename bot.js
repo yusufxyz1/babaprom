@@ -1,15 +1,15 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const chalk = require("chalk");
-const fs = require("fs");
+const fs = require("fs");//parsher youtube
 const moment = require("moment");
 const Jimp = require("jimp");
 const token = process.env.token;
 const ayarlar = require("./ayarlar.json");
 const db = require("quick.db");
-var prefix = process.env.prefix;
+var prefix = process.env.prefix;//parsher youtube
 
-client.on("ready", () => {
+client.on("ready", () => {//parsher youtube
   console.log(`Bot suan bu isimle aktif: ${client.user.tag}!`);
 });
 
@@ -21,11 +21,11 @@ const log = message => {
 
 const bot = new Discord.Client();
 
-var oyun = [
-`🤡🤡🤡`,
+var oyun = [ //buraları istediğin gibi geğiştir (tırnakların arasını)
+`Parsher YouTube`,
 `Abone Olun`,
-`Falcon Cansın`,
-`❤️ZyronX Code❤️`
+`Parsher sohbet`,
+`❤️parsher Code❤️`
 ]
   
 client.on("ready", () => {
@@ -38,7 +38,7 @@ setInterval(function() {
 });
 
 ///////////// KOMUTLAR BAŞ
-
+//parsher youtube
 
 ////////////// KOMUTLAR SON
 ////////////// ALTI ELLEME
@@ -57,7 +57,7 @@ fs.readdir("./komutlar/", (err, files) => {
       client.aliases.set(alias, props.help.name);
     });
   });
-});
+});//parsher youtube
 
 client.reload = command => {
   return new Promise((resolve, reject) => {
@@ -65,12 +65,12 @@ client.reload = command => {
       delete require.cache[require.resolve(`./komutlar/${command}`)];
       let cmd = require(`./komutlar/${command}`);
       client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
+      client.aliases.forEach((cmd, alias) => {//parsher youtube
         if (cmd === command) client.aliases.delete(alias);
       });
       client.commands.set(command, cmd);
       cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help.name);
+        client.aliases.set(alias, cmd.help.name);//parsher youtube
       });
       resolve();
     } catch (e) {
@@ -80,7 +80,7 @@ client.reload = command => {
 };
 
 client.load = command => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {//parsher youtube
     try {
       let cmd = require(`./komutlar/${command}`);
       client.commands.set(command, cmd);
@@ -95,7 +95,7 @@ client.load = command => {
 };
 
 client.unload = command => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {//parsher youtube
     try {
       delete require.cache[require.resolve(`./komutlar/${command}`)];
       let cmd = require(`./komutlar/${command}`);
@@ -104,7 +104,7 @@ client.unload = command => {
         if (cmd === command) client.aliases.delete(alias);
       });
       resolve();
-    } catch (e) {
+    } catch (e) {//parsher youtube
       reject(e);
     }
   });
@@ -114,14 +114,14 @@ client.elevation = message => {
   if (!message.guild) {
     return;
   }
-  let permlvl = 0;
+  let permlvl = 0;//parsher youtube
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
   if (process.env.sahip.includes(message.author.id)) permlvl = 4;
   return permlvl;
 };
 
-var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
+var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;//parsher youtube
 // client.on('debug', e => {
 //   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
 // });
@@ -131,7 +131,7 @@ client.on("warn", e => {
 });
 
 client.on("error", e => {
-  console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
+  console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));//parsher youtube
 });
 
 
