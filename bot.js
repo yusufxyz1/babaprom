@@ -22,7 +22,7 @@ const log = message => {
 const bot = new Discord.Client();
 
 var oyun = [ //buraları istediğin gibi geğiştir (tırnakların arasını)
-`Parsher YouTube`,
+` `,
 `Abone Olun`,
 `Parsher sohbet`,
 `❤️parsher Code❤️`
