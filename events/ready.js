@@ -1,21 +1,26 @@
-const Discord = require('discord.js');
-const moment = require('moment');
-const chalk = require('chalk');//parsher youtube
+const chalk = require("chalk");
+const moment = require("moment");
+const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
+
+let prefix = ayarlar.prefix;
 
 module.exports = client => {
-  var degisenOynuyor = [
-    //parsher youtube
-    "",
-    ""
-    
-  ]
-  
-  setInterval(function() {
-    var degisenOynuyor1 = degisenOynuyor[Math.floor(Math.random() * (degisenOynuyor.length))]
-    client.user.setActivity(`${degisenOynuyor1}`);//parsher youtube
+  console.log(
+    ` [${moment().format(
+      "YYYY-MM-DD HH:mm:ss"
+    )}] BOT: Aktif, Komutlar yüklendi!`
+  );
+  console.log(
+    ` [${moment().format("YYYY-MM-DD HH:mm:ss")}] BOT: ${
+      client.user.username
+    } ismi ile giriş yapıldı!`
+  );
+  client.user.setStatus("idle");
 
-}, 2 * 30000);
-  
-  client.user.setStatus("online"); //dnd, idle, online, offline
-  
-}
+  client.user.setActivity(`.yardım | Windes`, { type: "WATCHING" });
+
+  console.log(
+    ` [${moment().format("YYYY-MM-DD HH:mm:ss")}] Oyun ismi ayarlandı!`
+  );
+};
